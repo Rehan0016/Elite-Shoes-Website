@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/5437293fb8.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>.contact-us-container {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.contact-info {
+  margin-bottom: 40px;
+}
+
+.contact-info ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.contact-info ul li {
+  margin-bottom: 10px;
+}
+
+.feedback-form-container,
+.contact-form-container {
+  margin-bottom: 40px;
+}
+
+.feedback-form,
+.contact-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.feedback-form label,
+.contact-form label {
+  margin-bottom: 8px;
+}
+
+.feedback-form input,
+.contact-form input,
+.feedback-form textarea,
+.contact-form textarea,
+.feedback-form select {
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.feedback-form textarea,
+.contact-form textarea {
+  height: 150px;
+}
+
+.feedback-form button,
+.contact-form button {
+  padding: 12px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.feedback-form button:hover,
+.contact-form button:hover {
+  background-color: #555;
+}
+</style>
+<body>
+    <div class="navbar">
+        <div class="navitem">LOGO</div>
+        <div class="navitem"><a href="index.html" style="text-decoration: none; color: white;">HOME</a></div>
+
+        <div class="navitem"><a href="sports.html" style="text-decoration: none; color: white;">SPORTS </a></div>
+        <div class="navitem"><a href="collections.html"  style="text-decoration: none; color: white;">COLLECTIONS</a></div>
+        <div class="navitem"><a href="featured.html"  style="text-decoration: none; color: white;">FEATURED</a></div>
+        
+        <div class="navitem">ABOUT US</div>
+        <div class="navitem"><a href="login.html" style="text-decoration: none; color: white;">LOGIN </a></div>
+      
+        <div class="navitem" style="margin-left: auto; position: relative;" >
+          
+            <input type="text" 
+                   placeholder="Search..." 
+                   style="
+                     width: 0; 
+                     padding: 10px 30px; 
+                     border: 2px solid #ddd; 
+                     border-radius: 30px; 
+                     outline: none; 
+                     font-size: 16px; 
+                     color: #333; 
+                     background-color: white;
+                     transition: width 0.4s ease, border-color 0.4s ease;
+                     position: absolute;
+                     top: 50%;
+                     right: 10px;
+                     transform: translateY(-50%);
+                     z-index: 20;
+                   "
+                   onfocus="this.style.width='200px'; this.style.borderColor='#007BFF';"
+                   onblur="this.style.width='0'; this.style.borderColor='#ddd';"
+            />
+            <i class="fas fa-search" 
+               style="
+                 position: absolute; 
+                 right: 15px; 
+                 top: 50%; 
+                 transform: translateY(-50%); 
+                 color: #888;
+                 pointer-events: none;
+               ">
+            </i>
+        </div>
+    </div>
+    <div class="contact-us-container">
+      <h1>Contact Us</h1>
+    
+      <!-- Contact Information Section -->
+      <div class="contact-info">
+        <h2>Our Contact Information</h2>
+        <p>If you have any questions, feel free to reach out to us through the following methods:</p>
+        <ul>
+          <li><strong>Phone:</strong> +1 (800) 123-4567</li>
+          <li><strong>Email:</strong> support@eliteshoes.com</li>
+          <li><strong>Address:</strong> 123 Elite Shoes St, Fashion City, FC 45678</li>
+        </ul>
+      </div>
+    
+      <!-- Feedback Form Section -->
+      <div class="feedback-form-container">
+        <h2>We Value Your Feedback</h2>
+        <form action="/submit-feedback" method="post" class="feedback-form">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" placeholder="Your full name" required>
+    
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" placeholder="Your email address" required>
+    
+          <label for="message">Message/Feedback:</label>
+          <textarea id="message" name="message" placeholder="Share your thoughts with us..." required></textarea>
+    
+          <label for="rating">Rate Your Experience:</label>
+          <select id="rating" name="rating" required>
+            <option value="" disabled selected>Select a rating</option>
+            <option value="5">5 - Excellent</option>
+            <option value="4">4 - Good</option>
+            <option value="3">3 - Average</option>
+            <option value="2">2 - Below Average</option>
+            <option value="1">1 - Poor</option>
+          </select>
+    
+          <button type="submit">Submit Feedback</button>
+        </form>
+      </div>
+    
+      <!-- Optional Contact Form Section -->
+      <div class="contact-form-container">
+        <h2>Contact Us Directly</h2>
+        <form action="/submit-contact" method="post" class="contact-form">
+          <label for="contact-name">Name:</label>
+          <input type="text" id="contact-name" name="contact-name" placeholder="Your full name" required>
+    
+          <label for="contact-email">Email:</label>
+          <input type="email" id="contact-email" name="contact-email" placeholder="Your email address" required>
+    
+          <label for="contact-message">Your Message:</label>
+          <textarea id="contact-message" name="contact-message" placeholder="How can we help you?" required></textarea>
+    
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+    </div>
+    
+    
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="navitem">LOGO</div>
+        <div class="navitem"><a href="index.html" style="text-decoration: none; color: white;">HOME</a></div>
+
+        <div class="navitem"><a href="sports.html" style="text-decoration: none; color: white;">SPORTS </a></div>
+        <div class="navitem"><a href="collections.html"  style="text-decoration: none; color: white;">COLLECTIONS</a></div>
+        <div class="navitem"><a href="featured.html"  style="text-decoration: none; color: white;">FEATURED</a></div>
+        
+        <div class="navitem">ABOUT US</div>
+        <div class="navitem"><a href="login.html" style="text-decoration: none; color: white;">LOGIN </a></div>
+      
+        <div class="navitem" style="margin-left: auto; position: relative;" >
+            <input type="text" 
+                   placeholder="Search..." 
+                   style="
+                     width: 0; 
+                     padding: 10px 30px; 
+                     border: 2px solid #ddd; 
+                     border-radius: 30px; 
+                     outline: none; 
+                     font-size: 16px; 
+                     color: #333; 
+                     background-color: white;
+                     transition: width 0.4s ease, border-color 0.4s ease;
+                     position: absolute;
+                     top: 50%;
+                     right: 10px;
+                     transform: translateY(-50%);
+                     z-index: 20;
+                   "
+                   onfocus="this.style.width='200px'; this.style.borderColor='#007BFF';"
+                   onblur="this.style.width='0'; this.style.borderColor='#ddd';"
+            />
+            <i class="fas fa-search" 
+               style="
+                 position: absolute; 
+                 right: 15px; 
+                 top: 50%; 
+                 transform: translateY(-50%); 
+                 color: #888;
+                 pointer-events: none;
+               ">
+            </i>
+        </div>
+    </div>
+    <div class="smain">
+        
+        <div class="spt1">
+            <img src="Sports/football.jpg" style="border-radius: 12px 12px 0px 0px;"><br>
+            <button type="submit" class="sbtn" id="btnfball"><a href="Football.html" style="color: aliceblue;">Football</a></button>
+        </div>
+        
+        <div class="spt1">
+            <img src="Sports/basketball.jpg" style="border-radius: 12px 12px 0px 0px;"><br>
+            <button type="submit" class="sbtn" id="btnfball">Basketball</button>
+        </div>
+        
+    </div>
+    <div class="smain">
+        <div class="spt1">
+            <img src="Sports/running.jpg" style="border-radius: 12px 12px 0px 0px;"><br>
+            <button type="submit" class="sbtn" id="btnfball">Running</button>
+        </div>
+        <div class="spt1">
+            <img src="Sports/fitnessAndGym.jpg" style="border-radius: 12px 12px 0px 0px;"><br>
+            <button type="submit" class="sbtn" id="btnfball">Fitness And Gym</button>
+        </div>
+    </div> 
+</body>
+</html>

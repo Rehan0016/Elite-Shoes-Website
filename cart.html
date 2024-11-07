@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shoe Cart</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+   margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 100px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+ .summary{
+    width:38%;
+ }
+.bag {
+    width: 58%;
+}
+
+.bag h1, .summary h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.item {
+    display: flex;
+    align-items: flex-start;
+}
+
+.item img {
+    /* width: 120px; */
+    height: auto;
+    margin-right: 20px;
+}
+
+.item-details {
+    flex-grow: 1;
+}
+
+.size-quantity {
+    display: flex;
+    gap: 20px;
+    margin: 10px 0;
+}
+
+.size-quantity p {
+    margin: 0;
+}
+
+.mrp {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.item-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px; 
+}
+
+.item-actions button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.item-actions button:hover {
+    background-color: #f0f0f0;
+}
+
+.summary p {
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.summary .checkout {
+    width: 100%;
+    padding: 15px;
+    margin-top: 20px;
+    font-size: 18px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.summary .checkout:hover {
+    background-color: #333;
+}
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .bag, .summary {
+        width: 100%;
+        margin-top: 0;
+    }
+
+    .item {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .item img {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+
+    .size-quantity {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .summary {
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .bag h1, .summary h1 {
+        font-size: 20px;
+    }
+
+    .summary p {
+        font-size: 16px;
+    }
+
+    .summary .checkout {
+        font-size: 16px;
+        padding: 12px;
+    }
+
+    .item-actions button {
+        font-size: 20px;
+    }
+}
+
+
+</style>
+<body>
+    
+        <div class="navbar">
+            <div class="navitem">LOGO</div>
+            <div class="navitem"><a href="index.html" style="text-decoration: none; color: white;">HOME</a></div>
+    
+            <div class="navitem"><a href="sports.html" style="text-decoration: none; color: white;">SPORTS </a></div>
+            <div class="navitem"><a href="collections.html"  style="text-decoration: none; color: white;">COLLECTIONS</a></div>
+            <div class="navitem"><a href="collections.html"  style="text-decoration: none; color: white;">FEATURED</a></div>
+            
+            <div class="navitem">ABOUT US</div>
+            <div class="navitem"><a href="login.html" style="text-decoration: none; color: white;">LOGIN </a></div>
+          
+            <div class="navitem" style="margin-left: auto; position: relative;" >
+                <input type="text" 
+                       placeholder="Search..." 
+                       style="
+                         width: 0; 
+                         padding: 10px 30px; 
+                         border: 2px solid #ddd; 
+                         border-radius: 30px; 
+                         outline: none; 
+                         font-size: 16px; 
+                         color: #333; 
+                         background-color: white;
+                         transition: width 0.4s ease, border-color 0.4s ease;
+                         position: absolute;
+                         top: 50%;
+                         right: 10px;
+                         transform: translateY(-50%);
+                         z-index: 20;
+                       "
+                       onfocus="this.style.width='200px'; this.style.borderColor='#007BFF';"
+                       onblur="this.style.width='0'; this.style.borderColor='#ddd';"
+                />
+                <i class="fas fa-search" 
+                   style="
+                     position: absolute; 
+                     right: 15px; 
+                     top: 50%; 
+                     transform: translateY(-50%); 
+                     color: #888;
+                     pointer-events: none;
+                   ">
+                </i>
+            </div>
+        </div>
+        <div class="container">
+        
+        <div class="bag">
+            <h1>Bag</h1>
+            <div class="item">
+                <img src="Hover/hover1.png" height="200px" width="200px" alt="Nike Air Force 1 '07 SE">
+                <div class="item-details">
+                    <h2>Nike Air Force 1 '07 SE</h2>
+                    <p>Women's Shoes</p>
+                    <p>Spruce Aura/Green Frost/Sail/Pistachio Frost</p>
+                    <div class="size-quantity">
+                        <p>Size <a href="#" style="color:gray;">2.5</a></p>
+                        <p>Quantity <a href="#">1</a></p>
+                    </div>
+                    <p class="mrp">MRP: ₹ 10 795.00</p>
+                </div>
+                <div class="item-actions">
+                    <button>&#x2661;</button>
+                    <button>&#x1F5D1;</button>
+                </div>
+            </div>
+        </div>
+        <div class="summary">
+            <h1>Summary</h1>
+            <p>Subtotal <span>₹ 10 795.00</span></p>
+            <p>Estimated Delivery & Handling <span>₹ 1 250.00</span></p>
+            <p>Total <span>₹ 12 045.00</span></p>
+            <button class="checkout" onclick="window.location.href='payment.html';">Guest Checkout</button>
+            <button class="checkout" onclick="window.location.href='payment.html';">Member Checkout</button>
+        </div>
+    </div>
+</body>
+</html>

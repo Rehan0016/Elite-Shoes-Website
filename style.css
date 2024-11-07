@@ -1,0 +1,596 @@
+/* .navbar{
+    display: flex;
+    background-color: black;
+    height: 20%;
+    color: white;
+    
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+.navitem{
+    padding:3% 1.5%;
+    justify-content: center;
+    align-items: center;
+} */
+.center{
+    color: white;
+    background-color: black;
+    margin: 0;
+    padding:120px ;
+    height: 360px;
+}
+.dshoeimg{
+    width: 50%;
+    height:100%;
+
+}
+.dshoedescr{
+    width: 50%;
+    margin-left: 15%;
+}
+.dmain{
+    display: flex;
+    margin: 5% ;
+    
+    
+}
+.dmain p{
+    font-size: large;
+}
+.dsizel1 {
+    display: flex;
+}
+.dsizeOption{
+    height: 40px;
+    width: 65px;
+    border: 0.5px solid rgb(199, 199, 199);
+    text-align: center;
+    margin: auto;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+.dsizeOption:hover {
+    background-color: #f0f0f0; /* Light gray background on hover */
+    border: 1px solid black; /* Darker border on hover */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+    transform: scale(1.05); /* Slightly enlarge the option */
+}
+
+.dbtns{
+    padding: 3%;
+}
+.dbtn{
+    padding: 5%;
+    margin: 2% 0%;
+    width: 95%;
+    font-weight: 600;
+    font-size: medium;
+    border-radius: 30px;
+    border: 1px solid gray;
+}
+#datc{
+    background-color: black;
+    color: white;
+}
+#datc :hover{
+    background-color: gray;
+}
+#dfav{
+    background-color: white;
+    
+}
+#favc :hover{
+    border: 1px solid black;
+}
+.spt1{
+    margin-top: 12px;
+    width: 50%;
+}
+.sbtn{
+    width: 97%;
+    padding: 25px 0px 25px 0px;
+    color: white;
+    background-color: black;
+    border-radius: 0px 0px 12px 12px;
+    font-weight: bold;
+    font-size: large;
+    
+}
+.smain{
+    display: flex;
+}
+.sidebar{
+    height: 100%;
+    /* background-color: gray; */
+    
+    width: 20%;
+    border-radius: 0px 12px 12px 0px;
+}
+.fmain{
+    display: flex;
+}
+.sideitem{
+    padding: 28px ;
+    justify-content: center;
+}
+.fline{
+    display: flex;
+}
+.fitem{
+    transition: transform 0.3s ease; 
+    margin: 5%;
+    width: 30%;
+}
+.fcoll{
+    display: block;
+}
+
+
+.fitem:hover {
+    transform: scale(1.1);
+    transition-delay: 0.5s;
+}
+.dmain {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    margin: 2% 5%; /* Reduced margins to fit narrower screens better */
+}
+
+.dshoedescr {
+    width: 90%; /* Allow more space on narrower screens */
+    margin-left: 5%; /* Center description */
+}
+
+@media (min-width: 1024px) {
+    .dshoedescr {
+        width: 45%; /* Adjust to fit larger screens */
+        margin-left: 5%;
+    }
+
+    .dshoeimg {
+        width: 45%;
+        margin-right: 5%; /* Adjust to fit larger screens */
+    }
+}
+.dmain {
+    display: flex;
+    flex-wrap: wrap; /* Allows elements to wrap on smaller screens */
+    margin: 2% 5%; /* Adjust margins for better spacing */
+}
+
+.dshoeimg, .dshoedescr {
+    width: 100%; /* Full width on smaller screens */
+    margin: 10px 0; /* Add margin for spacing */
+}
+
+@media (min-width: 768px) {
+    .dshoeimg, .dshoedescr {
+        width: 48%; /* Side-by-side on larger screens */
+        margin: 0;
+    }
+
+    .dshoedescr {
+        margin-left: 4%;
+    }
+}
+
+.sidebar {
+    width: 20%;
+    height: 100vh;
+    position: fixed;
+    top: 20px; /* Space from the top */
+    left: 0;
+    background-color: #f4f4f4;
+    border-right: 1px solid #ddd;
+    padding: 30px 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    margin-top: 7%;
+}
+
+.sidebar .logo h2 {
+    margin: 0;
+    color: #222;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+.sidebar nav ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 30px;
+}
+
+.sidebar nav ul li {
+    margin: 20px 0;
+}
+
+.sidebar nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    padding: 10px;
+    display: block;
+    border-radius: 5px;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.sidebar nav ul li a:hover {
+    background-color: rgba(128, 128, 128, 0.2); /* Transparent gray hover effect */
+    color: #333;
+}
+
+.sidebar nav ul li a.active {
+    background-color: rgba}
+
+.fmain{
+     margin-left: 22%;
+}
+/* Navbar styling */
+.navbar {
+    display: flex;
+    background-color: rgb(11, 1, 1);
+    height: 80px; /* Adjust height to suit your design */
+    color: white;
+    align-items: center; /* Vertically center items */
+    padding: 0 20px; /* Add padding for spacing */
+    position: relative; /* Make sure it's relative for absolute positioning of the search bar */
+}
+
+.navitem {
+    padding: 0 15px; /* Adjust padding to space out nav items */
+    display: flex;
+    align-items: center;
+    color: white;
+    position: relative; /* Ensure this is positioned for the search bar */
+}
+
+/* Search bar styling */
+.navbar input[type="text"] {
+    width: 0; /* Initially hidden */
+    padding: 10px 30px; /* Space inside the search bar */
+    border: 2px solid #ddd; /* Border styling */
+    border-radius: 30px; /* Rounded corners */
+    outline: none; /* Remove default outline */
+    font-size: 16px; /* Font size */
+    color: #333; /* Text color */
+    background-color: white; /* Background color */
+    transition: width 0.4s ease, border-color 0.4s ease; /* Animation */
+    position: absolute; /* Positioning */
+    top: 50%; /* Center vertically */
+    right: 10px; /* Align to the right */
+    transform: translateY(-50%); /* Center vertically */
+    z-index: 20; /* Ensure it's above other elements */
+}
+
+/* Search icon styling */
+.navbar .fas.fa-search {
+    position: absolute; /* Positioning */
+    right: 15px; /* Position to the right of the search bar */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Center vertically */
+    color: #888; /* Color */
+    pointer-events: none; /* Ignore mouse events */
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        height: auto; /* Adjust height for stacked items */
+    }
+
+    .navitem {
+        padding: 10px;
+    }
+
+    .navbar input[type="text"] {
+        width: 100%; /* Full width on smaller screens */
+        position: static; /* Remove absolute positioning */
+        margin-top: 10px;
+    }
+
+    .navbar .fas.fa-search {
+        display: none; /* Hide search icon on small screens */
+    }
+}
+/* Background video styling */
+.background-video {
+    position: absolute; /* Ensure the video is positioned absolutely */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+    width: 100vw; /* Full viewport width */
+    height: 100vh; /* Full viewport height */
+    object-fit: cover; /* Ensure the video covers the entire area without distortion */
+    z-index: -1; /* Place the video behind other content */
+}
+
+/* Ensure the center content appears above the video */
+.center {
+    position: relative; /* Relative positioning for the text overlay */
+    z-index: 1; /* Ensure content is above the video */
+    color: white;
+    text-align: center; /* Center text horizontally */
+    padding: 20px; /* Optional padding */
+}
+.niche{
+     font-weight: 500;
+    margin-top: 700px;
+    font-size:23px ;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.nich{
+    font-size: 25px;
+    font-weight: 300;
+}
+.div2{
+margin-top: 0px;
+display: flex;
+}
+.div1{
+
+}
+.div3{
+    margin-left: 1200px;
+    padding: 100px;
+}
+.image-container {
+    width: 300px; /* Adjust the width as needed */
+    height: 200px; /* Adjust the height as needed */
+    background-color: #f0f0f0; /* Adjust the background color */
+    text-align: center; /* Adjust the text alignment */
+  }
+
+  .image-text {
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    color: #333;
+    margin-top: 20px; /* Adjust the top margin */
+  }
+
+.index-img-line{
+    display: flex;
+    margin: 3%;
+}
+.index-img{
+    width: 27%;
+    margin: 2.5%;
+}
+.imain-div{
+    display: flex;
+    
+}
+.imain-img{
+    width: 50%;
+}
+/* Basic reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Footer styling */
+body{
+    margin:0;
+    overflow-x:hidden;
+    }
+    
+    .footer{
+    background:#000;
+    padding:30px 0px;
+    font-family: 'Play', sans-serif;
+    text-align:center;
+    }
+    
+    .footer .row{
+    width:100%;
+    margin:1% 0%;
+    padding:0.6% 0%;
+    color:gray;
+    font-size:0.8em;
+    }
+    
+    .footer .row a{
+    text-decoration:none;
+    color:gray;
+    transition:0.5s;
+    }
+    
+    .footer .row a:hover{
+    color:#fff;
+    }
+    
+    .footer .row ul{
+    width:100%;
+    }
+    
+    .footer .row ul li{
+    display:inline-block;
+    margin:0px 30px;
+    }
+    
+    .footer .row a i{
+    font-size:2em;
+    margin:0% 1%;
+    }
+    
+    @media (max-width:720px){
+    .footer{
+    text-align:left;
+    padding:5%;
+    }
+    .footer .row ul li{
+    display:block;
+    margin:10px 0px;
+    text-align:left;
+    }
+    .footer .row a i{
+    margin:0% 3%;
+    }
+    }
+    .top-left-text {
+        position: absolute;
+        top: 250px; /* Adjust the top position as needed */
+        left: 120px; /* Adjust the left position as needed */
+        color: white; /* Adjust the text color */
+        font-size: 50px; /* Adjust the font size */
+        z-index: 2; /* Ensure the text is above other elements */
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    
+            position: absolute;
+           
+            line-height: 0.9; /* Decrease the line height to reduce vertical spacing */
+          
+          
+      }
+      .max{
+        color: rgb(15, 30, 249);
+      }
+      .fa-solid fa-magnifying-glass{
+       
+      }
+      /* Ensure that your navbar styles are updated */
+.navbar {
+    position: fixed; /* Fixes the navbar at the top */
+    top: 0; /* Aligns the navbar at the top of the page */
+    left: 0; /* Aligns the navbar to the left edge of the page */
+    width: 100%; /* Ensures the navbar spans the full width of the page */
+    background-color: #070202; /* Change this to your desired background color */
+    color: white; /* Text color for navbar items */
+    z-index: 1000; /* Ensures the navbar is on top of other content */
+}
+
+/* Add some padding to the body to prevent content from hiding under the fixed navbar */
+body {
+    padding-top: 60px; /* Adjust this value based on your navbar height */
+}
+
+/* Style for navbar items */
+.navitem {
+    display: inline-block;
+    padding: 15px 20px; /* Adjust padding to suit your design */
+}
+
+
+
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+  }
+  @media (max-width: 768px) {
+    .sidebar {
+      position: relative;
+      width: 100%;
+    }
+  }
+    /* Sidebar for F&Q */
+.faq-sidebar {
+    height: 100%; 
+    width: 0; 
+    position: fixed; 
+    z-index: 1000; 
+    top: 0; 
+    right: 0; 
+    background-color: #333; 
+    overflow-x: hidden; 
+    transition: 0.5s; 
+    padding-top: 60px; 
+    color: white;
+}
+
+.faq-sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.faq-sidebar a:hover {
+    color: #f1f1f1;
+}
+
+.faq-sidebar .closebtn {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 36px;
+}
+
+#faq-button {
+    font-size: 20px;
+}
+
+ul {
+    list-style-type: none;
+}
+body.dark-mode {
+    background-color: #121212;
+    color: white;
+}
+
+.navbar.dark-mode {
+    background-color: #333;
+}
+
+.navitem.dark-mode {
+    color: white;
+}
+
+.sidebar.dark-mode {
+    background-color: black;
+    color: white;
+}
+
+.sidebar.dark-mode a {
+    color: #ccc;
+}
+
+/* Dark theme for specific content areas */
+.dmain.dark-mode, .dsizel1.dark-mode, .dbtn.dark-mode, .sbtn.dark-mode, .center.dark-mode, .top-left-text.dark-mode {
+    background-color: #2c2c2c;
+    color: #fff;
+}
+
+/* Toggle dark mode for buttons */
+.dbtn.dark-mode, .sbtn.dark-mode {
+    background-color: #444;
+    color: #fff;
+}
+
+/* Dark theme for sidebar */
+body.dark-mode .sidebar {
+    background-color: #1a1a1a; /* Darker background for sidebar */
+    color: #f0f0f0; /* Lighter text color */
+    border-right: 1px solid #333; /* Subtle border for sidebar */
+}
+
+body.dark-mode .sidebar a {
+    color: #f0f0f0; /* Lighter text color for links */
+}
+
+body.dark-mode .sidebar a:hover {
+    background-color: #333; /* Darker hover effect for links */
+    color: #ffffff; /* Ensure hover text stays light */
+}
+
+body.dark-mode .sidebar-header {
+    background-color: #202020; /* Darker header in sidebar */
+    color: #f0f0f0; /* Lighter text color for header */
+}
+body.dark-mode .sidebar h2 {
+    
+    color: #f0f0f0; /* Lighter text color for header */
+}

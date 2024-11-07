@@ -1,0 +1,118 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shoe Description</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/5437293fb8.js" crossorigin="anonymous"></script>
+    <style>
+        /* Add any necessary styles here */
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="navitem">LOGO</div>
+        <div class="navitem"><a href="index.html" style="text-decoration: none; color: white;">HOME</a></div>
+        <div class="navitem"><a href="sports.html" style="text-decoration: none; color: white;">SPORTS</a></div>
+        <div class="navitem"><a href="collections.html" style="text-decoration: none; color: white;">COLLECTIONS</a></div>
+        <div class="navitem"><a href="featured.html" style="text-decoration: none; color: white;">FEATURED</a></div>
+        <div class="navitem">ABOUT US</div>
+        <div class="navitem"><a href="login.html" style="text-decoration: none; color: white;">LOGIN</a></div>
+        <div class="navitem" style="margin-left: auto; position: relative;">
+            <input type="text" 
+                   placeholder="Search..." 
+                   style="width: 0; padding: 10px 30px; border: 2px solid #ddd; border-radius: 30px; outline: none; font-size: 16px; color: #333; background-color: white; transition: width 0.4s ease, border-color 0.4s ease; position: absolute; top: 50%; right: 10px; transform: translateY(-50%); z-index: 20;"
+                   onfocus="this.style.width='200px'; this.style.borderColor='#007BFF';"
+                   onblur="this.style.width='0'; this.style.borderColor='#ddd';"
+            />
+            <i class="fas fa-search" style="position: absolute; right: 15px; top: 50%; transform: translateY(-50%); color: #888; pointer-events: none;"></i>
+        </div>
+    </div>  
+
+    <div class="dmain">
+        <div class="dshoeimg">
+            <img src="images/W+NIKE+V2K+RUN.png" alt="shoe1" height="550px" style="margin-left: 10%;">
+        </div>
+        <div class="dshoedescr">
+            <p style="color: rgb(164, 23, 23);">Sustainable materials</p>
+            <h2>Nike V2K Run</h2>
+            <br>
+            <p>MRP : ₹ 10 795.00</p>
+            <p style="color: gray;">incl. of taxes<br>
+                (Also includes all applicable duties)</p>
+            <br>
+            <div class="dsize">
+                <p>Select size</p>
+                <div class="dsizel1">
+                    <div class="dsizeOption" data-size="UK 3">UK 3</div>
+                    <div class="dsizeOption" data-size="UK 3.5">UK 3.5</div>
+                    <div class="dsizeOption" data-size="UK 4">UK 4</div>
+                    <div class="dsizeOption" data-size="UK 4.5">UK 4.5</div>
+                    <div class="dsizeOption" data-size="UK 5">UK 5</div>
+                </div>
+                <br>
+                <div class="dsizel1">
+                    <div class="dsizeOption" data-size="UK 5.5">UK 5.5</div>
+                    <div class="dsizeOption" data-size="UK 6">UK 6</div>
+                    <div class="dsizeOption" data-size="UK 6.5">UK 6.5</div>
+                    <div class="dsizeOption" data-size="UK 7">UK 7</div>
+                    <div class="dsizeOption" data-size="UK 7.5">UK 7.5</div>
+                </div>
+            </div>
+            <div class="dbtns">
+                <button class="dbtn" type="submit" id="datc">Add to Cart</button><br>
+                <button class="dbtn" type="submit" id="dfav">Favourite</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const selectedSizeElement = document.querySelector('.dsizeOption');
+        let selectedSize = '';
+
+        // Event listener for size selection
+        document.querySelectorAll('.dsizeOption').forEach(option => {
+            option.addEventListener('click', function() {
+                selectedSize = this.getAttribute('data-size');
+                // Highlight the selected size (optional)
+                document.querySelectorAll('.dsizeOption').forEach(opt => opt.classList.remove('selected'));
+                this.classList.add('selected');
+            });
+        });
+
+        // Add to cart functionality
+        document.getElementById('datc').addEventListener('click', function() {
+            if (!selectedSize) {
+                alert('Please select a size before adding to cart.');
+                return;
+            }
+
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const item = {
+                name: 'Nike V2K Run',
+                price: '₹ 10,795.00',
+                size: selectedSize
+            };
+            cart.push(item);
+            localStorage.setItem('cart', JSON.stringify(cart));
+            alert('Added to cart: ' + item.name + ' Size: ' + item.size);
+            updateCartCount();
+        });
+
+        // Update cart count
+        function updateCartCount() {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const cartCountElement = document.querySelector('.cart-notification');
+            cartCountElement.innerText = cart.length;
+            cartCountElement.style.display = cart.length > 0 ? 'block' : 'none';
+        }
+
+        // Update cart count on page load
+        window.onload = function() {
+            updateCartCount();
+        };
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

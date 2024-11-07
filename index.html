@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/5437293fb8.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+  <!-- Babel Compiler -->
+  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+
+    <style>
+        /* Sidebar for F&Q */
+        .faq-sidebar {
+            height: 100%; 
+            width: 0; 
+            position: fixed; 
+            z-index: 1000; 
+            top: 0; 
+            right: 0; 
+            background-color: #333; 
+            overflow-x: hidden; 
+            transition: 0.5s; 
+            padding-top: 60px; 
+            color: white;
+        }
+
+        .faq-sidebar a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .faq-sidebar a:hover {
+            color: #f1f1f1;
+        }
+
+        .faq-sidebar .closebtn {
+            position: absolute;
+            top: 10px;
+            right: 25px;
+            font-size: 36px;
+            color: #fff;
+        }
+
+        #faq-button {
+            font-size: 20px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="navitem">LOGO</div>
+        <div class="navitem"><a href="index.html" style="text-decoration: none; color: white;">HOME</a></div>
+        <div class="navitem"><a href="sports.html" style="text-decoration: none; color: white;">SPORTS</a></div>
+        <div class="navitem"><a href="collections.html" style="text-decoration: none; color: white;">COLLECTIONS</a></div>
+        <div class="navitem"><a href="featured.html" style="text-decoration: none; color: white;">FEATURED</a></div>
+        <div class="navitem">ABOUT US</div>
+        <div class="navitem"><a href="login.html" style="text-decoration: none; color: white;">LOGIN</a></div>
+
+        <label class="switch">
+            <input type="checkbox" id="theme-toggle">
+            <span class="slider round"></span>
+        </label>
+      
+        <div class="navitem" style="margin-left: auto; position: relative;">
+            <input type="text" 
+                   placeholder="Search..." 
+                   style="
+                     width: 0; 
+                     padding: 10px 30px; 
+                     border: 2px solid #ddd; 
+                     border-radius: 30px; 
+                     outline: none; 
+                     font-size: 16px; 
+                     color: #333; 
+                     background-color: white;
+                     transition: width 0.4s ease, border-color 0.4s ease;
+                     position: absolute;
+                     top: 50%;
+                     right: 10px;
+                     transform: translateY(-50%);
+                     z-index: 20;
+                   "
+                   onfocus="this.style.width='200px'; this.style.borderColor='#007BFF';"
+                   onblur="this.style.width='0'; this.style.borderColor='#ddd';"
+            />
+            <i class="fas fa-search" 
+               style="
+                 position: absolute; 
+                 right: 15px; 
+                 top: 50%; 
+                 transform: translateY(-50%); 
+                 color: #888;
+                 pointer-events: none;
+               ">
+            </i>
+        </div>
+        
+        <div class="navitem">
+            <button id="faq-button">
+                <i class="fas fa-question-circle"></i> F&Q
+            </button>
+        </div>
+    </div>
+
+    <div id="faq-sidebar" class="faq-sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeFaq()">&times;</a>
+        <h2>Frequently Asked Questions</h2>
+        <ul>
+            <li><a href="#">How do I return a product?</a></li>
+            <li><a href="#">What are the delivery charges?</a></li>
+            <li><a href="#">How can I track my order?</a></li>
+            <li><a href="#">How do I cancel my order?</a></li>
+        </ul>
+    </div>
+
+    <video class="background-video" autoplay muted loop>
+        <source src="images/Shoevid.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <div>
+        <center>  
+            <p class="niche" style="color: rgb(4, 4, 4);" >Lifestyle Running Shoes</p>
+            <h1 style="font-size:80px ;">EXTRA-ORDINARY</h1>
+            <p class="nich">Meet The latest collection of retro running shoes. The unlikely heroes of your easiest styling hack</p>
+        </center>
+    </div>
+    <div id="root"></div> <!-- This is where React will render your content -->
+
+    <!-- Your React Code -->
+    <script type="text/babel" src="app.js"></script>
+    
+    <div class="index-img-line">
+        <div class="index-img">
+            <img src="images/girl with white shoes.jpg" style="height: 600px; width: 420px;"><br>
+        </div>
+        <div class="index-img">
+            <img src="images/running shoe.jpg" style="height: 600px; width: 420px;"><br>
+        </div>
+        <div class="index-img">
+            <img src="images/shoes girl pose.jpg" style="height: 600px; width: 420px;"><br>
+        </div>
+    </div>
+
+    <div class="imain-div">
+        <div class="imain-img">
+            <img src="images/shoes2div1.jpg" class="hek" style="height: 700px; width: 730px;"><br>
+        </div>
+        <div class="imain-img">
+            <img src="images/model.jpg" style="height: 700px; width: 730px;"><br>
+        </div>
+    </div>
+
+    <!-- Cookie Banner -->
+    <div id="cookie-banner" style="display: none; position: fixed; bottom: 0; left: 0; right: 0; background: #333; color: white; padding: 20px; text-align: center; z-index: 1000;">
+        <p>
+            We use cookies to improve your experience. By using our site, you agree to our 
+            <a href="#" style="color: #00f;">Privacy Policy</a>.
+        </p>
+        <button id="accept-cookies" style="background-color: #edf904; color: rgb(7, 7, 7); border: none; padding: 10px 20px; margin-right: 10px;">Accept All</button>
+        <button id="reject-cookies" style="background-color:#edf904; color: rgb(9, 9, 9); border: none; padding: 10px 30px;">Reject</button>
+    </div>
+
+    <script>
+        // Show the cookie banner on page load
+        window.onload = function() {
+            document.getElementById('cookie-banner').style.display = 'block';
+        };
+
+        // Accept cookies
+        document.getElementById('accept-cookies').addEventListener('click', function() {
+            document.getElementById('cookie-banner').style.display = 'none';
+            alert('You accepted all cookies.');
+        });
+
+        // Reject cookies
+        document.getElementById('reject-cookies').addEventListener('click', function() {
+            document.getElementById('cookie-banner').style.display = 'none';
+            alert('You rejected all cookies.');
+        });
+
+        // Open the FAQ sidebar
+        document.getElementById("faq-button").addEventListener('click', function() {
+            document.getElementById("faq-sidebar").style.width = "300px";
+        });
+
+        // Close the FAQ sidebar
+        function closeFaq() {
+            document.getElementById("faq-sidebar").style.width = "0";
+        }
+    </script>
+
+    <footer>
+        <div class="footer">
+            <div class="row">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-instagram"></i></a>
+                <a href="#"><i class="fa fa-youtube"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+            </div>
+
+            <div class="row">
+                <ul>
+                    <li><a href="#">Contact us</a></li>
+                    <li><a href="#">Our Services</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Career</a></li>
+                </ul>
+            </div>
+
+            <div class="row">
+                INFERNO Copyright © 2021 Inferno - All rights reserved || Designed By:
+<script src="script.js"></script> usee react to give suggestion in the search bar 3 suggestions 
